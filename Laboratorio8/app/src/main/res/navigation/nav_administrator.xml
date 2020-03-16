@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_administrator"
+    app:startDestination="@id/principal">
+
+    <fragment
+        android:id="@+id/principal"
+        android:name="com.example.laboratorio8.actividades.Principal"
+        android:label="Principal" >
+        <action
+            android:id="@+id/action_principal_to_recyclerFragment"
+            app:destination="@id/recyclerFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/recyclerFragment"
+        android:name="com.example.laboratorio8.actividades.RecyclerFragment"
+        android:label="RecyclerFragment" />
+</navigation>

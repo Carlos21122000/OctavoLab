@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModels"
+            type="com.example.laboratorio8.actividades.PrincipalViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/design_default_color_primary"
+        tools:context=".actividades.Principal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="272dp"
+            android:layout_height="201dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginEnd="39dp"
+            app:imageUrl="@{viewModels.property.imgSrcUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.949" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="276dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:hint="Ingrese el usuario de Github"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.060000002" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/holo_green_light"
+            android:text="Buscar"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.187" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="146dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorButton"
+            android:text="Ver repositorios"
+            android:textColor="@android:color/background_light"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
